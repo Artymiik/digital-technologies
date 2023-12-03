@@ -1,0 +1,834 @@
+body
+  font-family: 'Montserrat', sans-serif
+  margin: 0px
+  padding: 0px
+  box-sizing: border-box
+
+  background-color: #18162B
+
+.hide
+  opacity: 0
+
+body.opened
+  overflow-y: hidden
+
+body::-webkit-scrollbar
+  width: 7px
+
+body::-webkit-scrollbar-track
+  background: #18162B
+
+body::-webkit-scrollbar-thumb
+  background-color: #282456
+  border-radius: 20px
+  border: 1px solid #18162B
+
+
+#container-preloader
+  width: 100%
+  height: 100vh
+  position: fixed
+  z-index: 1000
+  background-color: #18162B
+
+  transition: .8s
+
+.mask
+  width: 100%
+  height: 100%
+  position: fixed
+  z-index: 1000
+  transition: 0.6s
+  display: flex
+  justify-content: center
+  align-items: center
+.loader
+  width: 65px
+  height: 65px
+  border: 12px solid #282456
+  border-radius: 50%
+  border-left-color: #17152d
+  animation: loader 1.3s linear infinite
+@keyframes loader
+  100%
+    transform: rotate(360deg)
+
+.cercle-f
+  height: 250px
+  width: 250px
+  position: fixed
+  z-index: -1
+  top: 15%
+  left: 5%
+  filter: blur(30px)
+  opacity: 0.4
+
+  border-radius: 50%
+
+  background: #542e6f
+.cercle-y
+  height: 250px
+  width: 250px
+  position: fixed
+  z-index: -1
+  bottom: -10%
+  right: -3%
+  filter: blur(40px)
+  opacity: 0.3
+
+  border-radius: 50%
+
+  background: #6c6f2e
+.cercle-b
+  height: 250px
+  width: 250px
+  position: fixed
+  z-index: -1
+  top: 40%
+  left: 35%
+  filter: blur(30px)
+  opacity: 0.4
+
+  border-radius: 50%
+
+  background: #304a75
+.cercle-b-user
+  height: 250px
+  width: 250px
+  position: fixed
+  z-index: -1
+  top: 12%
+  right: 9%
+  filter: blur(40px)
+  opacity: 0.2
+
+  border-radius: 50%
+
+  background: #304a75
+
+.user-one
+  position: absolute
+  top: 25%
+  right: 10%
+  cursor: pointer
+
+  animation: moveUpDown 3s infinite
+  .contr
+    display: flex
+    align-items: center
+    border: 1px solid #fff
+    border-radius: 25px
+    width: 200px
+    padding: 7px
+
+    span
+      color: #fff
+      font-size: 32px
+      margin: 0 10px 0 10px
+
+
+    a
+      color: #fff
+      text-decoration: none
+      font-weight: 400
+      letter-spacing: .6px
+@keyframes moveUpDown
+  0%
+    transform: translateY(0)
+  50%
+    transform: translateY(-15px)
+  100% 
+    transform: translateY(0)
+
+.user-two
+  position: absolute
+  bottom: 7%
+  right: 30%
+  cursor: pointer
+
+  animation: moveUpDown 3s infinite
+  .contr
+    display: flex
+    align-items: center
+    border: 1px solid #fff
+    border-radius: 25px
+    width: 200px
+    padding: 7px
+    transition: .5s
+
+    span
+      color: #fff
+      font-size: 32px
+      margin: 0 10px 0 10px
+
+
+    a
+      color: #fff
+      text-decoration: none
+      font-weight: 400
+      letter-spacing: .6px
+.contr:hover
+  background: #fff
+  transition: .5s
+
+  span
+    color: #000
+  a
+    color: #000
+
+.user-tree
+  position: absolute
+  bottom: -14%
+  right: 7.5%
+  cursor: pointer
+
+  animation: moveUpDown 3s infinite
+  .contr
+    display: flex
+    align-items: center
+    border: 1px solid #fff
+    border-radius: 25px
+    width: 200px
+    padding: 7px
+    transition: .5s
+
+    span
+      color: #fff
+      font-size: 32px
+      margin: 0 10px 0 10px
+
+
+    a
+      color: #fff
+      text-decoration: none
+      font-weight: 400
+      letter-spacing: .6px
+.contr:hover
+  background: #fff
+  transition: .5s
+
+  span
+    color: #000
+  a
+    color: #000
+
+.user-four
+  position: absolute
+  bottom: 40%
+  right: 7.5%
+  cursor: pointer
+
+  animation: moveUpDown 3s infinite
+  .contr
+    display: flex
+    align-items: center
+    border: 1px solid #fff
+    border-radius: 25px
+    width: 200px
+    padding: 7px
+    transition: .5s
+
+    span
+      color: #fff
+      font-size: 32px
+      margin: 0 10px 0 10px
+
+
+    a
+      color: #fff
+      text-decoration: none
+      font-weight: 400
+      letter-spacing: .6px
+.contr:hover
+  background: #fff
+  transition: .5s
+
+  span
+    color: #000
+  a
+    color: #000
+
+
+#global
+  height: 100vh
+  margin: 0 50px 0
+  .container
+    display: flex
+    flex-direction: column
+    height: 100vh
+    justify-content: center
+    .title
+      font-size: 80px
+      font-weight: 700
+      max-width: 70vw
+      letter-spacing: .7px
+      line-height: 90px
+      text-wrap: balance
+      color: #ffffff
+      p
+        margin: 0 0 30px
+    .text
+      font-size: 14px
+      color: #c9c9c9
+      font-weight: 400
+      margin: 0
+
+      max-width: 50vw
+      display: -webkit-box
+      -webkit-line-clamp: 2
+      -webkit-box-orient: vertical
+      overflow: hidden
+      transition: 1s
+    .text p
+        letter-spacing: .5px
+        line-height: 25px
+
+    .text.show
+      display: -webkit-box
+      -webkit-line-clamp: initial
+      overflow: visible
+    a
+      text-decoration: none
+      color: #fff
+      padding: 10px 50px
+      border: 1px solid #fff
+      border-radius: 20px
+      font-size: 14px
+      letter-spacing: .7px
+      max-width: 200px
+      font-weight: 500
+      // padding: 5px
+      text-align: center
+      margin: 30px 0 0
+      text-transform: uppercase
+      transition: .5s
+    a:hover
+      background: #fff
+      color: #000
+      transition: .5s
+
+#sfers
+  margin: 0 50px 0
+  .container-stadia
+
+    .title-sfera
+      color: #fff
+      letter-spacing: 1px
+      font-size: 30px
+      display: flex
+      justify-content: center
+      font-weight: 700
+      margin: 50px 0 80px
+    .sf-top
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      justify-content: space-around
+
+      .sf-1
+        position: relative
+        cursor: pointer
+        transition: .3s
+        .bg-sf
+          width: 250px
+          height: 260px
+          background: hsl(205, 16%, 21%)
+          border: 3px solid #6f2f8a
+          opacity: 0.3
+
+          border-radius: 19px
+
+        .textForBg
+          position: absolute
+          top: 20px
+          left: 10px
+          display: flex
+          flex-direction: column
+          align-items: center
+          justify-content: center
+          width: 95%
+          
+          img
+            width: 240px
+            margin: -10px auto 0
+          p
+            color: #fff
+            letter-spacing: .6px
+            font-size: 12px
+            text-align: center
+          p:nth-child(2)
+            font-weight: 600
+            letter-spacing: 1px
+            margin: 20px 0 20px
+          p:nth-child(3)
+            font-weight: 400
+            letter-spacing: 1px
+            color: #d7d7d7
+            max-width: 230px
+            margin: 0 auto
+      .sf-1:hover
+        transform: scale(1.1)
+        transition: .5s
+      .sf-2
+        position: relative
+        cursor: pointer
+        transition: .3s
+        .bg-sf
+          width: 250px
+          height: 260px
+          background: hsl(205, 16%, 21%)
+          border: 3px solid #2f598a
+          opacity: 0.3
+
+          border-radius: 19px
+
+        .textForBg
+          position: absolute
+          top: 20px
+          left: 10px
+          display: flex
+          flex-direction: column
+          align-items: center
+          justify-content: center
+          width: 95%
+          
+          img
+            width: 100px
+            margin-top: 20px
+          p
+            color: #fff
+            letter-spacing: .6px
+            font-size: 12px
+            text-align: center
+          p:nth-child(2)
+            font-weight: 600
+            letter-spacing: 1px
+            margin: 20px 0 20px
+          p:nth-child(3)
+            font-weight: 400
+            letter-spacing: 1px
+            color: #d7d7d7
+            max-width: 230px
+            margin: 0 auto
+      .sf-2:hover
+        transform: scale(1.1)
+        transition: .5s
+      .sf-3
+        position: relative
+        cursor: pointer
+        transition: .3s
+        .bg-sf
+          width: 250px
+          height: 260px
+          background: hsl(205, 16%, 21%)
+          border: 3px solid #276941
+          opacity: 0.3
+
+          border-radius: 19px
+
+        .textForBg
+          position: absolute
+          top: 20px
+          left: 10px
+          display: flex
+          flex-direction: column
+          align-items: center
+          justify-content: center
+          width: 95%
+          
+          img
+            width: 150px
+            margin-top: -20px
+          p
+            color: #fff
+            letter-spacing: .6px
+            font-size: 12px
+            text-align: center
+          p:nth-child(2)
+            font-weight: 600
+            letter-spacing: 1px
+            margin: 10px 0 20px
+          p:nth-child(3)
+            font-weight: 400
+            letter-spacing: 1px
+            color: #d7d7d7
+            max-width: 230px
+            margin: 0 auto
+      .sf-3:hover
+        transform: scale(1.1)
+        transition: .5s
+      
+      .sf-4
+        position: relative
+        cursor: pointer
+        transition: .3s
+        .bg-sf
+          width: 250px
+          height: 260px
+          background: hsl(205, 16%, 21%)
+          border: 3px solid #696027
+          opacity: 0.3
+
+          border-radius: 19px
+
+        .textForBg
+          position: absolute
+          top: 20px
+          left: 10px
+          display: flex
+          flex-direction: column
+          align-items: center
+          justify-content: center
+          width: 95%
+          
+          img
+            width: 150px
+            margin-top: -10px
+          p
+            color: #fff
+            letter-spacing: .6px
+            font-size: 12px
+            text-align: center
+          p:nth-child(2)
+            font-weight: 600
+            letter-spacing: 1px
+            margin: 10px 0 20px
+          p:nth-child(3)
+            font-weight: 400
+            letter-spacing: 1px
+            color: #d7d7d7
+            max-width: 230px
+            margin: 0 auto
+      .sf-4:hover
+        transform: scale(1.1)
+        transition: .5s
+
+#popUpTesla
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 70%
+
+  opacity: 0
+  pointer-events: none
+  transition: 0.5s
+  .popUp-tesla
+    display: flex
+    align-items: center
+    background: rgba(0, 0, 0, 0.9)
+    border-radius: 30px
+    border: 3px solid #6f2f8a
+    color: #fff
+    padding: 40px 30px 65px 10px
+
+    .left
+      width: 100%
+      img
+        width: 500px
+        margin-left: -30px
+        margin-top: -30px
+    .right
+      width: 100%
+      p:nth-child(1)
+        font-size: 25px
+        text-align: right
+        font-weight: 600
+        letter-spacing: .6px
+      .text-tesla
+        font-size: 13px
+        text-align: right
+        font-weight: 400
+        letter-spacing: .8px
+        margin-bottom: 30px
+        color: #e1e1e1
+
+        display: -webkit-box
+        -webkit-line-clamp: 2
+        -webkit-box-orient: vertical
+        overflow: hidden
+        transition: 1s
+      .text-tesla.show
+        display: -webkit-box
+        -webkit-line-clamp: initial
+        overflow: visible
+      a
+        font-size: 13px
+        text-align: right
+        font-weight: 400
+        letter-spacing: .8px
+        position: absolute
+        right: 30px
+        padding-bottom: 30px
+        box-sizing: border-box
+        border: 1px solid #fff
+        padding: 10px 50px
+        border-radius: 14px
+        cursor: pointer
+        transition: .4s
+      a:hover
+        background: #fff
+        color: #000
+        transition: .4s
+#popUpTesla.open
+  opacity: 1
+  pointer-events: all
+  transition: 1s
+
+#popUpDelivery
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 70%
+
+  opacity: 0
+  pointer-events: none
+  transition: 0.5s
+  .popUp-delivery
+    display: flex
+    align-items: center
+    background: rgba(0, 0, 0, 0.9)
+    border-radius: 30px
+    border: 3px solid #2f598a
+    color: #fff
+    padding: 30px 30px 30px 10px
+
+    .left
+      width: 100%
+      img
+        width: 300px
+        margin-left: 50px
+        margin-top: 30px
+    .right
+      width: 100%
+      p:nth-child(1)
+        font-size: 25px
+        text-align: right
+        font-weight: 600
+        letter-spacing: .6px
+      .text-delivery
+        font-size: 13px
+        text-align: right
+        font-weight: 400
+        letter-spacing: .8px
+        margin-bottom: 30px
+        color: #e1e1e1
+
+        display: -webkit-box
+        -webkit-line-clamp: 2
+        -webkit-box-orient: vertical
+        overflow: hidden
+        transition: 1s
+      .text-delivery.show
+        display: -webkit-box
+        -webkit-line-clamp: initial
+        overflow: visible
+      a
+        font-size: 13px
+        text-align: right
+        font-weight: 400
+        letter-spacing: .8px
+        position: absolute
+        right: 30px
+        padding-bottom: 30px
+        box-sizing: border-box
+        border: 1px solid #fff
+        padding: 10px 50px
+        border-radius: 14px
+        cursor: pointer
+        transition: .4s
+      a:hover
+        background: #fff
+        color: #000
+        transition: .4s
+#popUpDelivery.open
+  opacity: 1
+  pointer-events: all
+  transition: 1s
+
+#popUpAfto
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 70%
+
+  opacity: 0
+  pointer-events: none
+  transition: 0.5s
+  .popUp-afto
+    display: flex
+    align-items: center
+    background: rgba(0, 0, 0, 0.9)
+    border-radius: 30px
+    border: 3px solid #276941
+    color: #fff
+    padding: 0px 30px 0px 10px
+
+    .left
+      width: 100%
+      img
+        width: 350px
+        margin-left: 70px
+        margin-top: 30px
+    .right
+      width: 100%
+      p:nth-child(1)
+        font-size: 25px
+        text-align: right
+        font-weight: 600
+        letter-spacing: .6px
+      .text-afto
+        font-size: 13px
+        text-align: right
+        font-weight: 400
+        letter-spacing: .8px
+        margin-bottom: 30px
+        color: #e1e1e1
+
+        display: -webkit-box
+        -webkit-line-clamp: 2
+        -webkit-box-orient: vertical
+        overflow: hidden
+        transition: 1s
+      .text-afto.show
+        display: -webkit-box
+        -webkit-line-clamp: initial
+        overflow: visible
+      a
+        font-size: 13px
+        text-align: right
+        font-weight: 400
+        letter-spacing: .8px
+        position: absolute
+        right: 30px
+        padding-bottom: 30px
+        box-sizing: border-box
+        border: 1px solid #fff
+        padding: 10px 50px
+        border-radius: 14px
+        cursor: pointer
+        transition: .4s
+      a:hover
+        background: #fff
+        color: #000
+        transition: .4s
+#popUpAfto.open
+  opacity: 1
+  pointer-events: all
+  transition: 1s
+
+#popUpCity
+  position: fixed
+  top: 50%
+  left: 50%
+  z-index: 2
+  transform: translate(-50%, -50%)
+  width: 70%
+
+  opacity: 0
+  pointer-events: none
+  transition: 0.5s
+  .popUp-city
+    display: flex
+    align-items: center
+    background: rgba(0, 0, 0, 0.9)
+    border-radius: 30px
+    border: 3px solid #696027
+    color: #fff
+    padding: 0px 30px 0px 10px
+
+    .left
+      width: 100%
+      img
+        width: 350px
+        margin-left: 70px
+        margin-top: 30px
+    .right
+      width: 100%
+      p:nth-child(1)
+        font-size: 25px
+        text-align: right
+        font-weight: 600
+        letter-spacing: .6px
+        text-wrap: balance
+      .text-city
+        font-size: 13px
+        text-align: right
+        font-weight: 400
+        letter-spacing: .8px
+        margin-bottom: 30px
+        color: #e1e1e1
+
+        display: -webkit-box
+        -webkit-line-clamp: 2
+        -webkit-box-orient: vertical
+        overflow: hidden
+        transition: 1s
+      .text-city.show
+        display: -webkit-box
+        -webkit-line-clamp: initial
+        overflow: visible
+      a
+        font-size: 13px
+        text-align: right
+        font-weight: 400
+        letter-spacing: .8px
+        position: absolute
+        right: 30px
+        padding-bottom: 30px
+        box-sizing: border-box
+        border: 1px solid #fff
+        padding: 10px 50px
+        border-radius: 14px
+        cursor: pointer
+        transition: .4s
+      a:hover
+        background: #fff
+        color: #000
+        transition: .4s
+#popUpCity.open
+  opacity: 1
+  pointer-events: all
+  transition: 1s
+
+#bottom
+  margin: 50px 100px
+  .container-b
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    .right
+      margin-right: 40px
+      p:nth-child(1)
+        color: #fff
+        font-weight: 600
+        letter-spacing: .7px
+        font-size: 40px
+        text-align: right
+        text-wrap: balance
+      p:nth-child(2)
+        color: #dcdcdc
+        font-weight: 400
+        letter-spacing: .7px
+        font-size: 14px
+        text-align: right
+        line-height: 20px
+        text-wrap: balance
+
+    .left
+      img
+        width: 300px
+        margin: 0 150px
+        text-align: center
+        border-radius: 14px
+        opacity: 0.8
+        margin-left: 40px
+        cursor: pointer
+        z-index: -1
+       
+            
+@import './adaptive/_plash'
+@import './adaptive/_mobile'
